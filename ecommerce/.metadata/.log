@@ -1,0 +1,53 @@
+!SESSION 2019-04-18 04:38:02.889 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -showlocation -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -showlocation -data /Applications/AMPPS/www/www -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2019-04-18 04:38:06.317
+!MESSAGE System property http.nonProxyHosts has been set to local„ÄÅ169.254/16|*.local„ÄÅ169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2019-04-18 04:38:07.184
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-04-18 04:38:07.184
+!MESSAGE A conflict occurred for ALT+COMMAND+Q P:
+Binding(ALT+COMMAND+Q P,
+	ParameterizedCommand(Command(org.eclipse.php.ui.explorer,PHP Script Explorer,
+		Shows the Script Explorer,
+		Category(org.eclipse.ui.category.views,Views,Commands for opening views,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@647ce968,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+Binding(ALT+COMMAND+Q P,
+	ParameterizedCommand(Command(org.eclipse.ui.views.showView,Show View,
+		Shows a particular view,
+		Category(org.eclipse.ui.category.views,Views,Commands for opening views,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a2b3aff,
+		[Parameter(org.eclipse.ui.views.showView.viewId,View,null,true), Parameter(org.eclipse.ui.views.showView.secondaryId,Secondary Id,null,true), Parameter(org.eclipse.ui.views.showView.makeFast,As FastView,null,true)],,true),[org.eclipse.core.commands.Parameterization@351c7030]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.zend.php.zendserver.deployment.ui 4 0 2019-04-18 04:38:10.029
+!MESSAGE No local installation of Zend Server was found.
+!STACK 0
+org.zend.sdklib.manager.MissingZendServerException: Could not read any of configuration file ('/etc/zce.rc-deb', '/etc/zce.rc-rpm', '/etc/zce.rc')
+	at org.zend.php.zendserver.deployment.core.targets.ZendServerManager.getLocalZendServerFromFile(ZendServerManager.java:194)
+	at org.zend.php.zendserver.deployment.core.targets.ZendServerManager.getLocalZendServer(ZendServerManager.java:102)
+	at org.zend.php.zendserver.deployment.ui.LocalZendServerStartup$1.run(LocalZendServerStartup.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.zend.php.zendserver.deployment.ui 4 0 2019-04-18 04:38:20.006
+!MESSAGE Address already in use (Bind failed)
+!STACK 0
+java.net.BindException: Address already in use (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:128)
+	at org.zend.php.zendserver.deployment.ui.chrome.SocketCommandListener.openServerSocket(SocketCommandListener.java:69)
+	at org.zend.php.zendserver.deployment.ui.chrome.SocketCommandListener$1.run(SocketCommandListener.java:39)
+	at java.lang.Thread.run(Thread.java:745)
